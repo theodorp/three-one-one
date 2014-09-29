@@ -18,7 +18,7 @@ res_recycle = []
 res_green = []
 
 
-with open('RequestData/SixtyFiveThousand.csv', 'r') as csvfile:
+with open('RequestData/SixtyFiveThousandRequests.csv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile)
 	for date, reason in spamreader:
 		if "All / White Goods / Pick Up Request" in reason:
