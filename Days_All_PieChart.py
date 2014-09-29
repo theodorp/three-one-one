@@ -1,3 +1,5 @@
+## Plots all requests in a pie chart divided by the days of the week the request was made
+
 import csv
 from collections import Counter
 import numpy as np
@@ -7,7 +9,7 @@ import datetime
 
 dates = []
 
-with open('AllRequests.csv', 'r') as csvfile:
+with open('RequestData/AllRequests.csv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile)
 	for date, reason in spamreader:
 		# if "Road" in reason:
@@ -34,7 +36,7 @@ day, count = zip(*weekday_tuples)
 # plt.xticks(indexes + width * 0.5, m)
 # plt.show()
 
-colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'white', 'red', 'red']
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'white', 'red', 'blue']
 explode = (0, 0, 0.1, 0, 0, 0, 0) # only "explode" the 2nd slice (i.e. 'Hogs')
 
 plt.pie(count, labels=m, autopct='%1.1f%%', explode=explode, shadow=True, startangle=90, colors=colors)

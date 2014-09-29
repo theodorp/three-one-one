@@ -6,16 +6,10 @@ from pandas import Series
 import datetime
 
 
-def movingaverage(values, window):
-    weights = np.repeat(1.0, window)/window
-    smas = np.convolve(values, weights, 'valid')
-    return smas
-
-
 dates = []
 
 # with open('AllRequests.csv', 'r') as csvfile:
-with open('SixtyFiveThousand.csv', 'r') as csvfile:
+with open('RequestData/SixtyFiveThousand.csv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile)
 	for date, reason in spamreader:
 		if "Pot Hole" in reason:
