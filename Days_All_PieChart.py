@@ -29,17 +29,17 @@ day, count = zip(*weekday_tuples)
 
 # # # # PY PLOT 
 
-# indexes = np.arange(len(day))
-# width = 1
+indexes = np.arange(len(day))
+width = 1
 
-# plt.bar(indexes, count, width, color='r')
-# plt.xticks(indexes + width * 0.5, m)
-# plt.show()
-
-colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'white', 'red', 'blue']
-explode = (0, 0, 0.1, 0, 0, 0, 0) # only "explode" the 2nd slice (i.e. 'Hogs')
-
-plt.pie(count, labels=m, autopct='%1.1f%%', explode=explode, shadow=True, startangle=90, colors=colors)
-plt.axis('equal')
-
+plt.bar(indexes, count, width, color='r')
+plt.xticks(indexes + width * 0.5, m)
 plt.show()
+
+# colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'white', 'red', 'blue']
+# explode = (0, 0, 0.1, 0, 0, 0, 0) # only "explode" the 2nd slice (i.e. 'Hogs')
+
+# plt.pie(count, labels=m, autopct='%1.1f%%', explode=explode, shadow=True, startangle=90, colors=colors)
+# plt.axis('equal')
+
+# plt.show()

@@ -9,7 +9,7 @@ import datetime
 dates = []
 
 # with open('AllRequests.csv', 'r') as csvfile:
-with open('RequestData/SixtyFiveThousandRequests.csv', 'r') as csvfile:
+with open('RequestData/AllRequests.csv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile)
 	for date, reason in spamreader:
 		if "Pot Hole" in reason:
