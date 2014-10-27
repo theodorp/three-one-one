@@ -56,8 +56,8 @@ request_days, request_count = zip(*sorted(c.items()))
 
 weekday_names = [datetime.datetime.strptime(i+'-2010', '%m-%d-%Y').strftime('%a') for i in request_days]
 
-i = 10 # 
-j = 80 # 
+i = 0 # 
+j = 172 # 
 
 idx = [datetime.datetime(2010, 1, 1) + datetime.timedelta(days=x) for x in range(i, j)]
 
@@ -67,7 +67,7 @@ B = pd.Series(min_temps[i:j], index=weekday_names[i:j])
 fig, ax1 = plt.subplots()
 ax1.bar(idx, A, align='center')
 ax1.set_ylabel("Number Of Complaints")
-ax1.xaxis.set_major_locator(dates.WeekdayLocator(byweekday=(0,4),interval=1))
+ax1.xaxis.set_major_locator(dates.WeekdayLocator(byweekday=(0),interval=1))
 ax1.xaxis.set_major_formatter(dates.DateFormatter('%d\n%b\n%a'))
 ax1.xaxis.grid(True, which="major")
 ax1.xaxis.set_ticks_position('bottom')
