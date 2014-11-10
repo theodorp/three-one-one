@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import calendar
 import datetime
+import seaborn as sns
 
 dates = []
 
@@ -32,7 +33,7 @@ day, count = zip(*weekday_tuples)
 indexes = np.arange(len(day))
 width = 1
 
-plt.bar(indexes, count, width, color='r')
+plt.bar(indexes, count, width)
 plt.xticks(indexes + width * 0.5, m)
 plt.show()
 
