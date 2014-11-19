@@ -9,8 +9,8 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 import matplotlib.dates as dates
 import seaborn as sns
 
-sns.set_style('dark', {"grid.linewidth": .5, "axes.facecolor": "white", 
-						'xtick.major.size': 5, 'grid.color': '.8', 
+sns.set_style('dark', {"grid.linewidth": .5, "axes.facecolor": "white",
+						'xtick.major.size': 5, 'grid.color': '.8',
 						'axes.edgecolor': '.8', 'legend.frameon': True})
 
 # Puts NaN on days when a temperature wasn't recorded
@@ -52,7 +52,7 @@ temp_list = (list(data_311_dates_months) + [day for day in datelist_formatted if
 data_temperature_dates = (list(data_temperature_dates) + [day for day in datelist_formatted if day not in list(data_temperature_dates)])
 
 
-## Count number of times a complaint occured on a given day
+## Count number of times a complaint occurred on a given day
 c = Counter(temp_list)
 complaint_day, complaint_counter = zip(*sorted(c.items()))
 

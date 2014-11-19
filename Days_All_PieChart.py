@@ -32,10 +32,13 @@ day, count = zip(*weekday_tuples)
 
 indexes = np.arange(len(day))
 width = 1
-
 plt.bar(indexes, count, width)
 plt.xticks(indexes + width * 0.5, m)
+plt.ylabel("Number of Complaints")
+plt.title("311 Complaints Per Day")
+
 plt.show()
+plt.savefig('foo2.png')
 
 # colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'white', 'red', 'blue']
 # explode = (0, 0, 0.1, 0, 0, 0, 0) # only "explode" the 2nd slice (i.e. 'Hogs')
